@@ -1,7 +1,10 @@
-# Hierarchical Learning-based Graph Partition for Large-scale Vehicle Routing Problems
+# Hierarchical Learning-based Graph Partition for Large-scale Vehicle Routing Problems (AAMAS 2025)
+# Multi-level Graph Partition via Hierarchical Learning for Large-scale Vehicle Routing Problems (JAAMAS 2026)
 
 ## Introduction
-This is the official PyTorch implementation for the paper titled ["Hierarchical Learning-based Graph Partition for Large-scale Vehicle Routing Problems"](https://arxiv.org/pdf/2502.08340).
+This is the official PyTorch implementation for the paper 
+["Hierarchical Learning-based Graph Partition for Large-scale Vehicle Routing Problems"](https://arxiv.org/pdf/2502.08340),
+as well as its extended version ["Multi-level Graph Partition via Hierarchical Learning for Large-scale Vehicle Routing Problems"]().
 The paper presents the HLGP framework, a new divide-and-conquer approach that combines global and local partition policies in graph partitioning tasks for subsequent node permutation. 
 This method enables the scaling of neural solvers for the vehicle routing problem to handle over 10,000 nodes efficiently.
 ## Dependencies
@@ -47,14 +50,16 @@ bash eval_hlgp_sl.sh [batch_size] [beam_size] [problem_size] [knns] [eval_revisi
 Arguments:
 [problem_size]: 1000, 2000, 5000, 7000, 10000
 [beam_size]: 16 (problem_size=1000, 2000), 8 (problem_size=5000), 4 (problem_size=7000, 10000)
-[knns]: 250 (problem=1000, 5000, 7000, 10000), 400 (problem_size=2000)
+[knns]: 250 (problem_size=1000, 5000, 7000, 10000), 400 (problem_size=2000)
 [eval_revision_iters]: 5
 [dataset_name]: 1000, 2000, 5000, 7000, 10000, 1000_[explosion,gaussian,rotation], 2000_[gaussian,], 5000_[explosion,], 7000_[rotation,]
 ```
 
 ## Acknowledgement
-We appreciate the anonymous reviewers, (S)ACs, and PCs of AAMAS2025 for their insightful
-comments to further improve our paper and their service to the community.
+We appreciate the anonymous reviewers, (S)ACs, and PCs of AAMAS 2025 for their insightful
+comments to improve our paper and their service to the community.
+Furthermore, we are sincerely grateful to the anonymous reviewers and editors of JAAMAS for their thoughtful suggestions 
+in extending this work and for their valuable contributions to the community.
 We would like to thank the authors of GLOP ([implementation of GLOP](https://github.com/henry-yeh/GLOP))
 and the authors of BQ ([implementation of BQ](https://github.com/naver/bq-nco)) for their invaluable contributions to the community.
 
@@ -62,6 +67,15 @@ and the authors of BQ ([implementation of BQ](https://github.com/naver/bq-nco)) 
 ## Citation
 
 ```
+@article{pan2026hlgp4cvrp,
+  title={Multi-level Graph Partition via Hierarchical Learning for Large-scale Vehicle Routing Problems},
+  author={Pan, Yuxin and Liu, Ruohong and Chen, Yize and Cao Zhiguang and Lin, Fangzhen},
+  journal={Autonomous Agents and Multi-Agent Systems},
+  year={2026},
+  publisher={Springer}
+}
+
+
 @inproceedings{
 pan2025hlgp4cvrp,
 title={Hierarchical Learning-based Graph Partition for Large-scale Vehicle Routing Problems},
